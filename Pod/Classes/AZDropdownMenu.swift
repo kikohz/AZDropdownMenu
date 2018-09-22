@@ -24,6 +24,9 @@ open class AZDropdownMenu: UIView {
 
     /// The handler used when menu item is tapped
     open var cellTapHandler : ((_ indexPath:IndexPath) -> Void)?
+    
+    /// The handler used when menu is hide
+    open var hideMenuHandler : (() -> Void)?
 
     // MARK: - Configuration options
 
@@ -321,6 +324,9 @@ open class AZDropdownMenu: UIView {
                 self.removeFromSuperview()
             }
         )
+        if let hideHandler = self.hideMenuHandler {
+            hideHandler()
+        }
     }
 }
 
