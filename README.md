@@ -75,6 +75,8 @@ menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
 }
 ```
 
+`hideMenuHandler` Menu hide handler
+
 #### Create menu with icons
 Pass in a AZDropdownMenuItemData in the initializer: `public init(dataSource:[AZDropdownMenuItemData])` and you are good to go.
 
